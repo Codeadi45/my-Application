@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/logoutmenu"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:orderInCategory="100"
+        android:title="LOGOUT"
+        app:showAsAction="always">
+
+
+    </item>
+    <item
+        android:id="@+id/myprofile"
+        android:icon="@drawable/ic_person_outline_black_24dp"
+        android:orderInCategory="100"
+        android:title="PROFILE"
+        app:showAsAction="always"></item>
+
+</menu>

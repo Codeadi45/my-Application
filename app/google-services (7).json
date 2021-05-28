@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "504964341739",
+    "firebase_url": "https://studcare-645f1.firebaseio.com",
+    "project_id": "studcare-645f1",
+    "storage_bucket": "studcare-645f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504964341739:android:d79b89b5b8d678389bc3ae",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504964341739-8c6ifpdteoh62miicl2odihb30gr22h6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBspCg-XK8TM8f7AZeIC0a8JVzuGA8G6RM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504964341739-8c6ifpdteoh62miicl2odihb30gr22h6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
