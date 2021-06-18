@@ -46,7 +46,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137"
-        app:srcCompat="@drawable/coursesn" />
+        app:srcCompat="@drawable/selfstudy" />
 
     <ImageView
         android:id="@+id/books"
@@ -58,6 +58,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.741"
-        app:srcCompat="@drawable/assignment" />
+        app:srcCompat="@drawable/dalelo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
