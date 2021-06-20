@@ -8,94 +8,77 @@
     tools:context=".gosignActivity">
 
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="212dp"
-        android:layout_height="312dp"
-        android:animateLayoutChanges="true"
-        android:animationCache="true"
-        android:fadingEdge="horizontal|vertical"
-        android:filterTouchesWhenObscured="true"
+    <EditText
+        android:id="@+id/eTname"
+        android:layout_width="281dp"
+        android:layout_height="49dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="36dp"
+        android:ems="10"
+
+        android:hint="NAME"
+        android:inputType="textPersonName"
+
+        android:textColor="#41BC18"
+        android:textColorHint="#151515"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408">
+        app:layout_constraintVertical_bias="0.204" />
+
+    <EditText
+        android:id="@+id/eTemail"
+        android:layout_width="281dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
 
 
-        <EditText
-            android:id="@+id/eTname"
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginRight="36dp"
-            android:ems="10"
+        android:layout_marginRight="36dp"
+        android:ems="10"
+        android:hint="EMAIL"
+        android:inputType="textEmailAddress"
 
-            android:hint="NAME"
-            android:inputType="textPersonName"
-            android:paddingLeft="50dp"
-            android:textColor="#41BC18"
-            android:textColorHint="#151515"
-            android:textColorLink="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.555"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.206" />
-
-        <EditText
-            android:id="@+id/eTemail"
-            android:layout_width="187dp"
-            android:layout_height="56dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
+        android:textColor="#22EF2C"
+        android:textColorHint="#0A0B0A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.382" />
 
 
-            android:layout_marginRight="36dp"
-            android:ems="10"
-            android:hint="EMAIL"
-            android:inputType="textEmailAddress"
-            android:paddingLeft="50dp"
-            android:textColor="#22EF2C"
-            android:textColorHint="#0A0B0A"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.387" />
+    <EditText
+        android:id="@+id/eTpassword"
+        android:layout_width="281dp"
+        android:layout_height="49dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="36dp"
+        android:ems="10"
+        android:gravity="bottom"
+        android:hint=" PASSWORD"
+        android:inputType="textPassword"
 
-        <EditText
-            android:id="@+id/eTpassword"
-            android:layout_width="185dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginRight="36dp"
-            android:ems="10"
-            android:gravity="bottom"
-            android:hint=" PASSWORD"
-            android:inputType="textPassword"
-            android:paddingLeft="50dp"
-            android:textColor="#26C62D"
-            android:textColorHint="#151515"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.583" />
-
-    </FrameLayout>
+        android:textColor="#26C62D"
+        android:textColorHint="#151515"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.525" />
 
     <ImageView
         android:id="@+id/imageView3"

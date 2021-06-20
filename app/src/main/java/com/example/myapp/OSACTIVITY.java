@@ -1,6 +1,9 @@
 package com.example.myapp;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,7 +24,7 @@ public class OSACTIVITY extends AppCompatActivity {
         setContentView(R.layout.activity_o_s_a_c_t_i_v_i_t_y);
 
         mRecyclerView= findViewById(R.id.recycle);
-        Query query = FirebaseDatabase.getInstance().getReference().child("uploads").orderByChild("course").equalTo("OS");
+        Query query = FirebaseDatabase.getInstance().getReference().child("uploads").orderByChild("course").equalTo("OPERATING SYSTEM");
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
@@ -43,6 +46,38 @@ public class OSACTIVITY extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tool_bar,menu);
+        MenuItem menuItem = menu.findItem(R.id.app_bar_search) ;
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                query = query.toLowerCase();
+                search(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                newText=newText.toLowerCase();
+                search(newText);
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+    }
+    private void search(String str){
+        FirebaseRecyclerOptions<model> options =
+                new FirebaseRecyclerOptions.Builder<model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("uploads").orderByChild("name").startAt(str).endAt(str+"\uf8ff"),model.class)
+                        .build();
+        adapter = new Myadapter(options,this);
+        onStart();
+        mRecyclerView.setAdapter(adapter);
+
     }
 
 

@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".eeeActivity"></activity>
+        <activity android:name=".uploadcivilactivity"></activity>
+        <activity android:name=".branchActivity" />
+        <activity android:name=".eeeActivity" />
         <activity android:name=".webtechactivity" />
         <activity android:name=".aladaactivity" />
         <activity android:name=".dccnactivity" />
@@ -22,6 +24,7 @@
         <activity android:name=".uploadsactivity" />
         <activity android:name=".OSACTIVITY" />
         <activity android:name=".assignmentactivity" />
+        <activity android:name=".civilactivity" />
         <activity android:name=".oops4activity" />
         <activity android:name=".oops3activity" />
         <activity android:name=".oops2activity" />

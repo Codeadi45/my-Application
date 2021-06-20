@@ -29,7 +29,7 @@ public class Myadapter extends FirebaseRecyclerAdapter<model,Myadapter.Myviewhol
     class Myviewholder extends RecyclerView.ViewHolder {
 
         TextView name,faculty,Count;
-        ImageView Download,Likes;
+        ImageView Download;
 
 
 
@@ -38,7 +38,7 @@ public class Myadapter extends FirebaseRecyclerAdapter<model,Myadapter.Myviewhol
             faculty = (TextView) itemView.findViewById(R.id.Faculty);
             Download = (ImageView) itemView.findViewById(R.id.download);
             name = (TextView) itemView.findViewById(R.id.question);
-            Likes = (ImageView) itemView.findViewById(R.id.likes);
+
             Count = (TextView) itemView.findViewById(R.id.count);
 
 

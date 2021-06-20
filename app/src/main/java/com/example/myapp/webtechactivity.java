@@ -26,7 +26,7 @@ public class webtechactivity extends AppCompatActivity {
 
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("uploads").orderByChild("course").equalTo("web technology "),model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("uploads").orderByChild("course").equalTo("WEBTECHNOLOGIES"),model.class)
                         .build();
         adapter = new Myadapter(options,this);
         onStart();
@@ -53,14 +53,28 @@ public class webtechactivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                query = query.toLowerCase();
+                search(query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                newText=newText.toLowerCase();
+                search(newText);
                 return false;
             }
         });
         return super.onCreateOptionsMenu(menu);
+    }
+    private void search(String str){
+        FirebaseRecyclerOptions<model> options =
+                new FirebaseRecyclerOptions.Builder<model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("uploads").orderByChild("name").startAt(str).endAt(str+"\uf8ff"),model.class)
+                        .build();
+        adapter = new Myadapter(options,this);
+        onStart();
+        mRecyclerView.setAdapter(adapter);
+
     }
 }

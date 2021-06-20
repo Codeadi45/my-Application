@@ -22,7 +22,7 @@ public class homeactivity extends AppCompatActivity {
         setContentView(R.layout.activity_homeactivity);
         firebaseAuth = FirebaseAuth.getInstance();
         imag1 = (ImageView) findViewById(R.id.engineering);
-        imag2 = (ImageView) findViewById(R.id.books);
+        imag2 = (ImageView) findViewById(R.id.elect);
         eng = (TextView) findViewById(R.id.textView4);
         books = (TextView) findViewById(R.id.textView5);
 
@@ -35,7 +35,7 @@ public class homeactivity extends AppCompatActivity {
         imag2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(homeactivity.this,assignmentactivity.class));
+                startActivity(new Intent(homeactivity.this,branchActivity.class));
             }
         });
 

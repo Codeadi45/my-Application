@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/logoutmenu"
-        android:icon="@android:drawable/ic_lock_power_off"
+        android:icon="@drawable/ic_baseline_power_settings_new_24"
         android:orderInCategory="100"
         android:title="LOGOUT"
         app:showAsAction="always">

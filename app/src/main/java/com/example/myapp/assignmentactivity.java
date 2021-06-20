@@ -20,7 +20,7 @@ public class assignmentactivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignmentactivity);
-        spinner = (Spinner) findViewById(R.id.spinner);
+        spinner = (Spinner) findViewById(R.id.csespinner);
         upload = (FloatingActionButton) findViewById(R.id.bt) ;
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
