@@ -14,7 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".uploadcivilactivity"></activity>
+        <activity android:name=".calculusactivity"></activity>
+        <activity android:name=".dlmactivity" />
+        <activity android:name=".stestingactivity" />
+        <activity android:name=".dsaactivity" />
+        <activity android:name=".aodactivity" />
+        <activity android:name=".tocactivity" />
+        <activity android:name=".uploadcivilactivity" />
         <activity android:name=".branchActivity" />
         <activity android:name=".eeeActivity" />
         <activity android:name=".webtechactivity" />

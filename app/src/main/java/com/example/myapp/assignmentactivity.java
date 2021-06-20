@@ -67,30 +67,37 @@ public class assignmentactivity extends AppCompatActivity {
 
                         break;
                     case 4:
+                        startActivity(new Intent(assignmentactivity.this,stestingactivity.class));
 
                         break;
                     case 5:
                         startActivity(new Intent(assignmentactivity.this,dccnactivity.class));
                         break;
                     case 6:
+                        startActivity(new Intent(assignmentactivity.this,dsaactivity.class));
                         break;
                     case 7:
+                        startActivity(new Intent(assignmentactivity.this,tocactivity.class));
                         break;
                     case 8:
+                        startActivity(new Intent(assignmentactivity.this,dlmactivity.class));
 
                         break;
                     case 9:
                         startActivity(new Intent(assignmentactivity.this,eeeActivity.class));
                         break;
                     case 10:
+                        startActivity(new Intent(assignmentactivity.this,aodactivity.class));
 
                         break;
                     case 11:
                         startActivity(new Intent(assignmentactivity.this,aladaactivity.class));
                         break;
                     case 12:
+                        startActivity(new Intent(assignmentactivity.this,calculusactivity.class));
                         break;
                     case 13:
+
                         break;
                 }
             }
