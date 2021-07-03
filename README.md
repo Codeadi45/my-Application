@@ -28,3 +28,6 @@ Page, Subject Page, Material Page, PDF viewer, User’s
 Profile Page, Logout  
 • Admin Feature: Support and maintenance and update the  
 content.   
+
+SCREEN SHOTS :
+![WhatsApp Image 2021-07-03 at 2 18 24 AM](https://user-images.githubusercontent.com/75107024/124349671-5493ef00-dba5-11eb-9c7d-9051b8da9ca5.jpeg)
