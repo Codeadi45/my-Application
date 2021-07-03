@@ -31,3 +31,14 @@ content.
 
 SCREEN SHOTS :
 ![WhatsApp Image 2021-07-03 at 2 18 24 AM](https://user-images.githubusercontent.com/75107024/124349671-5493ef00-dba5-11eb-9c7d-9051b8da9ca5.jpeg)
+
+
+![WhatsApp Image 2021-07-03 at 2 18 24 AM (4)](https://user-images.githubusercontent.com/75107024/124349818-09c6a700-dba6-11eb-8252-52f1a320e634.jpeg)
+![WhatsApp Image 2021-07-03 at 2 18 24 AM (3)](https://user-images.githubusercontent.com/75107024/124349819-0a5f3d80-dba6-11eb-8ae4-94af2afd3801.jpeg)
+![WhatsApp Image 2021-07-03 at 2 18 24 AM (2)](https://user-images.githubusercontent.com/75107024/124349820-0a5f3d80-dba6-11eb-8dee-6c3fdb028019.jpeg)
+![WhatsApp Image 2021-07-03 at 2 18 24 AM (1)](https://user-images.githubusercontent.com/75107024/124349807-fadff480-dba5-11eb-8977-257c72b0f282.jpeg)
+![WhatsApp Image 2021-07-03 at 2 18 24 AM (5)](https://user-images.githubusercontent.com/75107024/124349817-092e1080-dba6-11eb-9c97-3c025ce283ca.jpeg)
+![WhatsApp Image 2021-07-03 at 2 18 24 AM (8)](https://user-images.githubusercontent.com/75107024/124349814-07644d00-dba6-11eb-8ae1-5a359cdcaf7b.jpeg)
+![WhatsApp Image 2021-07-03 at 2 18 24 AM (7)](https://user-images.githubusercontent.com/75107024/124349815-08957a00-dba6-11eb-9642-ca5c7bb16d22.jpeg)
+![WhatsApp Image 2021-07-03 at 2 18 24 AM (6)](https://user-images.githubusercontent.com/75107024/124349816-092e1080-dba6-11eb-95fe-a53d3a64612b.jpeg)
+
