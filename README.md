@@ -42,3 +42,9 @@ SCREEN SHOTS :
 ![WhatsApp Image 2021-07-03 at 2 18 24 AM (7)](https://user-images.githubusercontent.com/75107024/124349815-08957a00-dba6-11eb-9642-ca5c7bb16d22.jpeg)
 ![WhatsApp Image 2021-07-03 at 2 18 24 AM (6)](https://user-images.githubusercontent.com/75107024/124349816-092e1080-dba6-11eb-95fe-a53d3a64612b.jpeg)
 
+
+
+SO , finally User can download assignment and can see notes of dsalgo , oops and many more interview preparation resources for free.
+
+thankyou
+Happy Coding.
