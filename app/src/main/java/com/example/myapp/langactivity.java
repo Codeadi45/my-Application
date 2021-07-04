@@ -74,7 +74,12 @@ public class langactivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.logoutmenu:{
                 Logout();
+                return true;
 
+            }
+            case R.id.backmenu:{
+                startActivity(new Intent(langactivity.this,engineerActivity.class));
+                return true;
             }
 
         }

@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -17,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -35,6 +38,7 @@ public class uploadsactivity extends AppCompatActivity {
     ImageView Select;
     StorageReference storageReference;
     DatabaseReference databaseReference;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +48,8 @@ public class uploadsactivity extends AppCompatActivity {
         Choose = (TextView)  findViewById(R.id.textView2);
         Faculty = (EditText) findViewById(R.id.faculty);
         edittext = (EditText) findViewById(R.id.editText3) ;
+        edittext.setBackgroundResource(R.drawable.backtext);
+        firebaseAuth = FirebaseAuth.getInstance();
 
         uploadpdf = (ImageView) findViewById(R.id.upload);
         storageReference = FirebaseStorage.getInstance().getReference();
@@ -83,9 +89,9 @@ public class uploadsactivity extends AppCompatActivity {
 
     private void selectPDF() {
         Intent intent = new Intent();
-        intent.setType("application/pdf");
+        intent.setType("*/*");
         intent.setAction(intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent,"PDF FILE SELECT"),1);
+        startActivityForResult(Intent.createChooser(intent,"FILE SELECT"),1);
 
     }
 
@@ -132,6 +138,34 @@ public class uploadsactivity extends AppCompatActivity {
             }
         });
 
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+    private void Logout(){
+
+
+        firebaseAuth.signOut();
+        finish();
+        startActivity(new Intent(uploadsactivity.this,MainActivity.class));
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logoutmenu:{
+                Logout();
+                return true;
+
+            }
+            case R.id.backmenu:{
+                startActivity(new Intent(uploadsactivity.this,assignmentactivity.class));
+                return true;
+
+            }
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

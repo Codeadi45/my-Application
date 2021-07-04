@@ -9,32 +9,6 @@
     tools:context=".civilactivity">
 
 
-    <Spinner
-        android:id="@+id/civispinner"
-        android:layout_width="341dp"
-        android:layout_height="34dp"
-        android:gravity="start"
-        android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.184" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="225dp"
-        android:layout_height="35dp"
-        android:text="Select your course"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071" />
-
     <TextView
         android:id="@+id/textView10"
         android:layout_width="255dp"
@@ -67,5 +41,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.933"
         app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="288dp"
+        android:layout_height="161dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273">
+
+        <ImageView
+            android:id="@+id/croom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/assignment" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="294dp"
+        android:layout_height="36dp"
+        android:text="CIVIL ASSIGNMENT ROOM"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

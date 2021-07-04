@@ -2,6 +2,8 @@ package com.example.myapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,18 +12,21 @@ import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
 public class assignmentactivity extends AppCompatActivity {
     Spinner spinner;
     FloatingActionButton upload;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignmentactivity);
         spinner = (Spinner) findViewById(R.id.csespinner);
         upload = (FloatingActionButton) findViewById(R.id.bt) ;
+        firebaseAuth = FirebaseAuth.getInstance();
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,6 +102,7 @@ public class assignmentactivity extends AppCompatActivity {
                         startActivity(new Intent(assignmentactivity.this,calculusactivity.class));
                         break;
                     case 13:
+                        startActivity(new Intent(assignmentactivity.this,nisactivity.class));
 
                         break;
                 }
@@ -108,5 +114,32 @@ public class assignmentactivity extends AppCompatActivity {
             }
         });
 
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+    private void Logout(){
+
+
+        firebaseAuth.signOut();
+        finish();
+        startActivity(new Intent(assignmentactivity.this,MainActivity.class));
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logoutmenu:{
+                Logout();
+                return true;
+
+            }
+            case R.id.backmenu:{
+                startActivity(new Intent(assignmentactivity.this,branchActivity.class));
+                return true;
+            }
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

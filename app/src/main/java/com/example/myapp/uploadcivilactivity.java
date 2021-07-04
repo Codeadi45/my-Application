@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -17,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -34,6 +37,7 @@ public class uploadcivilactivity extends AppCompatActivity {
     ImageView Select;
     StorageReference storageReference;
     DatabaseReference databaseReference;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +47,12 @@ public class uploadcivilactivity extends AppCompatActivity {
         Choose = (TextView)  findViewById(R.id.textView2);
         Faculty = (EditText) findViewById(R.id.faculty);
         edittext = (EditText) findViewById(R.id.editText3) ;
+        edittext.setBackgroundResource(R.drawable.backtext);
         spinner = (Spinner) findViewById(R.id.sp2);
         uploadpdf = (ImageView) findViewById(R.id.upload);
+        firebaseAuth = FirebaseAuth.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
-        databaseReference = FirebaseDatabase.getInstance().getReference("uploads");
+        databaseReference = FirebaseDatabase.getInstance().getReference("civil");
         ArrayList<String> courses = new ArrayList<String>();
         courses.add("Select");
         courses.add("Surveying");
@@ -82,6 +88,7 @@ public class uploadcivilactivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(uploadcivilactivity.this, "uploaded Successfully", Toast.LENGTH_LONG).show();
+
                 startActivity(new Intent(uploadcivilactivity.this,civilactivity.class));
             }
         });
@@ -114,7 +121,7 @@ public class uploadcivilactivity extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Uploading...");
         progressDialog.show();
-        final StorageReference reference = storageReference.child("uploads/" + System.currentTimeMillis()+".pdf");
+        final StorageReference reference = storageReference.child("uploadcivil/" + System.currentTimeMillis()+".pdf");
         reference.putFile(data)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -144,6 +151,32 @@ public class uploadcivilactivity extends AppCompatActivity {
             }
         });
 
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+    private void Logout(){
+        firebaseAuth.signOut();
+        finish();
+        startActivity(new Intent(uploadcivilactivity.this,MainActivity.class));
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logoutmenu:{
+                Logout();
+                return true;
+
+            }
+            case R.id.backmenu:{
+                startActivity(new Intent(uploadcivilactivity.this,civilactivity.class));
+                return true;
+
+            }
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

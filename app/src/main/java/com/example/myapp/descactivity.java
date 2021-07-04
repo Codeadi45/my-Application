@@ -57,6 +57,10 @@ public class descactivity extends AppCompatActivity {
                 Logout();
 
             }
+            case R.id.backmenu:{
+                startActivity(new Intent(descactivity.this,mathactivity.class));
+
+            }
         }
         return super.onOptionsItemSelected(item);
     }

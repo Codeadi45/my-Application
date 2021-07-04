@@ -12,28 +12,26 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class calculusactivity extends AppCompatActivity {
+public class nisactivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
 
     Myadapter adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculusactivity);
-        mRecyclerView = findViewById(R.id.calcspinner);
+        setContentView(R.layout.activity_nisactivity);
+        mRecyclerView = findViewById(R.id.nispinner);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("uploads").orderByChild("course").equalTo("CALCULUS"), model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("uploads").orderByChild("course").equalTo("NIS"),model.class)
                         .build();
-        adapter = new Myadapter(options, this);
+        adapter = new Myadapter(options,this);
         onStart();
         mRecyclerView.setAdapter(adapter);
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -46,11 +44,10 @@ public class calculusactivity extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.tool_bar, menu);
-        MenuItem menuItem = menu.findItem(R.id.app_bar_search);
+        getMenuInflater().inflate(R.menu.tool_bar,menu);
+        MenuItem menuItem = menu.findItem(R.id.app_bar_search) ;
         SearchView searchView = (SearchView) menuItem.getActionView();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -62,31 +59,26 @@ public class calculusactivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                newText = newText.toLowerCase();
+                newText=newText.toLowerCase();
                 search(newText);
                 return false;
             }
         });
         return super.onCreateOptionsMenu(menu);
     }
-
-    private void search(String str) {
-
+    private void search(String str){
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("uploads").orderByChild("name").startAt(str).endAt(str + "\uf8ff"), model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("uploads").orderByChild("name").startAt(str).endAt(str+"\uf8ff"),model.class)
                         .build();
-        adapter = new Myadapter(options, this);
+        adapter = new Myadapter(options,this);
         onStart();
         mRecyclerView.setAdapter(adapter);
+
     }
 
 
+
+
+
 }
-
-
-
-
-
-
-

@@ -47,7 +47,12 @@ public class mathactivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.logoutmenu:{
                 Logout();
+                return true;
 
+            }
+            case R.id.backmenu:{
+                startActivity(new Intent(mathactivity.this,engineerActivity.class));
+                return true;
             }
         }
         return super.onOptionsItemSelected(item);

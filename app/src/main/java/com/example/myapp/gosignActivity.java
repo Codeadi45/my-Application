@@ -2,10 +2,17 @@ package com.example.myapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,10 +39,12 @@ public class gosignActivity extends AppCompatActivity {
     private static  String KEY_USER = "NAME";
 
     public EditText username,userpassword,useremail;
-    public ImageView goback,done;
+    public ImageView done;
+    public TextView Mesg;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private FirebaseUser user;
     private FirebaseAuth firebaseAuth;
+    private CheckBox checkp;
 
 
 
@@ -44,13 +53,53 @@ public class gosignActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gosign);
+        Mesg = (TextView) findViewById(R.id.mesg);
 
-        username=(EditText)findViewById(R.id.eTname);
+        username =(EditText)findViewById(R.id.eTname);
+        username.setBackgroundResource(R.drawable.backtext);
+
         userpassword=(EditText)findViewById(R.id.eTpassword);
+        userpassword.setBackgroundResource(R.drawable.backtext);
         useremail=(EditText)findViewById(R.id.eTemail);
-        goback =(ImageView) findViewById(R.id.back);
+        useremail.setBackgroundResource(R.drawable.backtext);
+        checkp = (CheckBox) findViewById(R.id.cbox);
+
+        userpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Mesg.setText("");
+
+            }
+        });
+        useremail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Mesg.setText("");
+
+            }
+        });
+        username.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Mesg.setText("");
+
+            }
+        });
         done=(ImageView) findViewById(R.id.sighn);
         firebaseAuth = FirebaseAuth.getInstance();
+        checkp.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    userpassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }
+                else{
+                    userpassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
+
+
 
         done.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,14 +108,15 @@ public class gosignActivity extends AppCompatActivity {
                 final String user_email=useremail.getText().toString().trim();
                 final String user_pass=userpassword.getText().toString().trim();
 
-                if(Validate()){
+
+
+
+                if(Validate() ){
                     firebaseAuth.createUserWithEmailAndPassword(user_email,user_pass)
                             .addOnCompleteListener(gosignActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-
-
                                         sendemailverification();
 
 
@@ -128,14 +178,12 @@ public class gosignActivity extends AppCompatActivity {
 
 
                 }
+                username.setText("");
+                useremail.setText("");
+                userpassword.setText("");
             }
         });
-        goback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(gosignActivity.this,MainActivity.class));
-            }
-        });
+
 
 
     }
@@ -145,8 +193,9 @@ public class gosignActivity extends AppCompatActivity {
         String name = username.getText().toString();
         String password = userpassword.getText().toString();
         String email = useremail.getText().toString();
-        if(name.isEmpty() || email.isEmpty() || password.isEmpty() ){
-            Toast.makeText(this,"please enter all the details",Toast.LENGTH_SHORT).show();
+
+        if(name.isEmpty() || email.isEmpty() || password.isEmpty()){
+            Mesg.setText("Please enter all details carefully!");
         }else{
             result = true;
         }
@@ -159,9 +208,13 @@ public class gosignActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(gosignActivity.this, "Successfully Registered,Verification email sent", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(gosignActivity.this, "Verification mail has been sent!", Toast.LENGTH_SHORT).show();
                         firebaseAuth.signOut();
                         finish();
+
+
+                        
+
 
                     } else {
                         Toast.makeText(gosignActivity.this, "Verification mail hasn't been sent!", Toast.LENGTH_SHORT).show();
@@ -170,4 +223,22 @@ public class gosignActivity extends AppCompatActivity {
             });
         }
     }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.back,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+
+            case R.id.back:{
+                startActivity(new Intent(gosignActivity.this,MainActivity.class));
+                return true;
+            }
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

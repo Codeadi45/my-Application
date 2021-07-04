@@ -14,7 +14,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        app:cardBackgroundColor="#0E0E0E"
+        app:cardBackgroundColor="#FBF9F9"
         app:cardCornerRadius="21dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,15 +36,15 @@
             <TextView
                 android:id="@+id/question"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:textColor="#F4F1F4" />
+                android:layout_height="100dp"
+                android:textColor="#101010" />
 
             <TextView
                 android:id="@+id/Faculty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="150dp"
-                android:textColor="#EFEEEA" />
+                android:textColor="#0B0B0A" />
 
             <ImageView
                 android:id="@+id/download"
@@ -54,7 +54,7 @@
                 android:layout_marginStart="200dp"
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="125dp"
-                app:srcCompat="@drawable/ic_file_download_black_24dp" />
+                app:srcCompat="@drawable/ic_baseline_assignment_returned_24" />
 
             <TextView
                 android:id="@+id/count"
@@ -63,7 +63,7 @@
                 android:layout_marginStart="220dp"
                 android:layout_marginLeft="220dp"
                 android:layout_marginTop="155dp"
-                android:textColor="#9C27B0"
+                android:textColor="#0B0A0B"
                 android:textSize="12sp" />
 
             <TextView
@@ -74,7 +74,7 @@
                 android:layout_marginLeft="195dp"
                 android:layout_marginTop="102dp"
                 android:text="Download"
-                android:textColor="#E8E4E4" />
+                android:textColor="#0B0A0A" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".calculusactivity"></activity>
+        <activity android:name=".civildaactivity"></activity>
+        <activity android:name=".nisactivity" />
+        <activity android:name=".calculusactivity" />
         <activity android:name=".dlmactivity" />
         <activity android:name=".stestingactivity" />
         <activity android:name=".dsaactivity" />

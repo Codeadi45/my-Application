@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/backmenu"
+        android:icon="@drawable/ic_baseline_arrow_back_ios_24"
+        android:orderInCategory="100"
+        android:title="BACK"
+        app:showAsAction="always">
+
+
+    </item>
+
 
     <item
         android:id="@+id/logoutmenu"
@@ -11,11 +21,5 @@
 
 
     </item>
-    <item
-        android:id="@+id/myprofile"
-        android:icon="@drawable/ic_person_outline_black_24dp"
-        android:orderInCategory="100"
-        android:title="PROFILE"
-        app:showAsAction="always"></item>
 
 </menu>

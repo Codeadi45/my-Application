@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void Validate(String username,String password){
-        progressdialog.setMessage("Wait till we checking firebase");
+        progressdialog.setMessage("Logging in!! Please Wait...");
         progressdialog.show();
         firebaseauth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override

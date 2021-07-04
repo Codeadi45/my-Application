@@ -16,10 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-public class Myadapter extends FirebaseRecyclerAdapter<model,Myadapter.Myviewholder> {
+public class civiladapter extends FirebaseRecyclerAdapter<model,civiladapter.Myviewholder> {
     Context context;
     Context c = context;
-    public Myadapter(@NonNull FirebaseRecyclerOptions<model> options, Context context) {
+    public civiladapter(@NonNull FirebaseRecyclerOptions<model> options, Context context) {
 
         super(options);
         this.context = context;
@@ -48,10 +48,10 @@ public class Myadapter extends FirebaseRecyclerAdapter<model,Myadapter.Myviewhol
 
 
     @Override
-    protected void onBindViewHolder(@NonNull final Myviewholder myviewholder, int i, @NonNull final model Model) {
+    protected void onBindViewHolder(@NonNull final civiladapter.Myviewholder myviewholder, int i, @NonNull final model Model) {
         myviewholder.name.setText(Model.getName());
         final String course = Model.getCourse();
-        myviewholder.faculty.setText(Model.getFaculty());
+        myviewholder.faculty.setText(Model.getCourse());
         final String url = Model.getUrl();
         ImageView load = myviewholder.Download;
         final Uri uri = Uri.parse(url);
@@ -84,12 +84,12 @@ public class Myadapter extends FirebaseRecyclerAdapter<model,Myadapter.Myviewhol
 
     @NonNull
     @Override
-    public Myviewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public civiladapter.Myviewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
 
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview, null, false);
 
-        return new Myadapter.Myviewholder(view);
+        return new civiladapter.Myviewholder(view);
     }
     public void View_click(View v){
         Intent i = new Intent();
@@ -102,12 +102,6 @@ public class Myadapter extends FirebaseRecyclerAdapter<model,Myadapter.Myviewhol
 
 
 }
-
-
-
-
-
-
 
 
 

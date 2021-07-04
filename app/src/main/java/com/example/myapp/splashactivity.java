@@ -7,6 +7,8 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class splashactivity extends AppCompatActivity {
     private static int SLEEP_TIMER = 2;
 
@@ -30,8 +32,14 @@ public class splashactivity extends AppCompatActivity {
             }catch(InterruptedException e){
                 e.printStackTrace();
             }
-            startActivity(new Intent(splashactivity.this,MainActivity.class));
-            finish();
+            if(FirebaseAuth.getInstance().getCurrentUser()==null) {
+                startActivity(new Intent(splashactivity.this, MainActivity.class));
+                finish();
+            }
+            else{
+                startActivity(new Intent(splashactivity.this, homeactivity.class));
+                finish();
+            }
         }
 
     }

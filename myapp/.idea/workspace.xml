@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="826dad0a-2057-4492-a793-a76c1d4b0965" name="Default Changelist" comment="" />
+    <list default="true" id="826dad0a-2057-4492-a793-a76c1d4b0965" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable-v24/backtext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable-v24/ic_baseline_arrow_back_ios_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable-v24/ic_baseline_assignment_returned_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_baseline_assignment_returned_24.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/Myadapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/Myadapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/alaactivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/alaactivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/assignmentactivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/assignmentactivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/branchActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/branchActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/calculusactivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/calculusactivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/descactivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/descactivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/engineerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/engineerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/gosignActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/gosignActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/mathactivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/mathactivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/uploadsactivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/myapp/uploadsactivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_gosign.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_gosign.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_uploadsactivity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_uploadsactivity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/cardview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/cardview.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/menu/menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/menu/menu.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

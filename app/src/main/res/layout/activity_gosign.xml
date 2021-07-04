@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
     android:animateLayoutChanges="true"
     tools:context=".gosignActivity">
 
@@ -19,9 +20,11 @@
         android:layout_marginRight="36dp"
         android:ems="10"
 
+        android:fadingEdge="horizontal|vertical"
+        android:filterTouchesWhenObscured="false"
         android:hint="NAME"
         android:inputType="textPersonName"
-
+        android:paddingLeft="5dp"
         android:textColor="#41BC18"
         android:textColorHint="#151515"
         android:textColorLink="#FFFFFF"
@@ -47,6 +50,7 @@
         android:hint="EMAIL"
         android:inputType="textEmailAddress"
 
+        android:paddingLeft="5dp"
         android:textColor="#22EF2C"
         android:textColorHint="#0A0B0A"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,16 +65,17 @@
         android:id="@+id/eTpassword"
         android:layout_width="281dp"
         android:layout_height="49dp"
-        android:layout_gravity="bottom"
+        android:layout_gravity="bottom|center_vertical"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="36dp"
         android:layout_marginRight="36dp"
         android:ems="10"
         android:gravity="bottom"
-        android:hint=" PASSWORD"
-        android:inputType="textPassword"
+        android:hint="Password"
 
+        android:inputType="textPassword"
+        android:paddingLeft="5dp"
         android:textColor="#26C62D"
         android:textColorHint="#151515"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -101,7 +106,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846"
+        app:layout_constraintVertical_bias="0.95"
         app:srcCompat="@drawable/button_rounded" />
 
     <TextView
@@ -112,34 +117,37 @@
         android:textColor="#151515"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
-
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="122dp"
-        android:layout_height="53dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97"
-        app:srcCompat="@drawable/button_rounded" />
+        app:layout_constraintVertical_bias="0.924" />
 
     <TextView
-        android:id="@+id/textback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BACK"
-        android:textColor="#151515"
+        android:id="@+id/mesg"
+        android:layout_width="289dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#F10909"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941" />
+        app:layout_constraintVertical_bias="0.782" />
+
+    <CheckBox
+        android:id="@+id/cbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

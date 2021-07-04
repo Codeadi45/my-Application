@@ -11,18 +11,21 @@
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="209dp"
-        android:layout_height="42dp"
+        android:layout_width="214dp"
+        android:layout_height="123dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Question"
         android:inputType="textMultiLine"
+
+
         android:textColorHint="#121212"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <ImageView
         android:id="@+id/select"
@@ -81,7 +84,7 @@
         android:layout_width="209dp"
         android:layout_height="42dp"
         android:ems="10"
-        android:hint="Faculty"
+        android:hint="Uploaded by"
         android:inputType="textPersonName"
         android:textColorHint="#0C0C0C"
         app:layout_constraintBottom_toBottomOf="parent"
